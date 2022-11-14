@@ -1,0 +1,166 @@
+:root {
+    --theme-red:#d80505;
+    --theme-light-grey:#e2ded7;
+    --theme-mid-grey:#666;
+    --theme-dark-grey:#434f53;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+.wrapper {
+    
+    width: 65%;
+    margin: auto;
+    background-color: white;
+    
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+header {
+    width: 100%;
+}
+
+.inv-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: .25fr .2fr 1fr 1fr 1fr 1fr .75fr;
+
+  grid-gap: 10px;
+  padding: 0 2em;
+  width:100%;
+}
+
+.customer, #job-parameters {
+    border-top: 2px solid var(--theme-light-grey);
+    border-bottom: 2px solid var(--theme-light-grey);
+    padding:10px 0;
+}
+
+label {
+    vertical-align:top;
+}
+
+.customer>textarea {
+    width: 95%;
+}
+
+textarea {
+    border: 0;
+    overflow: hidden;
+    resize: none;
+    font-size: 115%;
+    font-family: inherit;
+    line-height: 135%;
+}
+
+#job-parameters>.columns, #amount-parameters>.columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    font-size: 110%;
+}
+
+#job-parameters input, #amount-parameters input{
+    width: 100%;
+    border: 0;
+    font-size: 110%;
+    font-family: inherit;
+}
+
+#amount-parameters input {
+    background-color: var(--theme-light-grey);
+}
+
+.job-headings {
+    background-color: var(--theme-mid-grey);
+    color: white;
+    font-size: 110%;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+[data-jobItem], [data-jobAmt] {
+    border-bottom: 2px solid var(--theme-light-grey);
+    overflow: auto;
+    width: 100%;
+    font-size: 110%;
+}
+
+[data-jobAmt]>input {
+    width: 90%;
+    border: 0;
+    font-size: 110%;
+}
+
+textarea:hover, textarea:focus{
+    background-color:var(--theme-light-grey);
+}
+
+.calc {
+    background-color: var(--theme-dark-grey);
+    color: white;
+    padding: .5em;
+    border: 0;
+    font-size: 110%;
+}
+
+footer {
+    border-top: 2px solid var(--theme-red);
+    color: var(--theme-dark-grey);
+    height: 4em;
+    text-align: center;
+    font-size: 110%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5%;
+}
+
+@media print {
+    body {
+        font-size: 11px;
+    }
+    
+    .wrapper {
+        width: 100%;
+    }
+    
+    .inv-container {
+        display: grid;
+       /* grid-template-rows: .25fr .2fr 1fr 1fr 1fr 1fr .75fr; */
+        grid-gap: 4px;
+        padding: 0;
+    }
+    
+    .columns {
+        grid-gap: 2px;
+        font-size: 100%;
+    }
+    
+    label {
+        font-size: 11px;
+    }
+    
+    .job-headings {
+        border-bottom: 2px solid var(--theme-light-grey);
+    }
+    
+    .calc {
+        display: none;
+    }
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+	    <title>Felice Invoices</title>
+	    <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+    <body>
+    <!-- Wrapper Flex Parent -->
+	<section class="wrapper">
+
+        <!-- Header Flex Child -->
+		<header>
+            <img src="./assets/felice-logo-outlines.svg" alt="">
+        </header>
+		
+        <!-- Main Flex Child and Grid Parent-->
+        <main class="inv-container">
+            <section class="customer">
+                <label>TO:</label>
+                <textarea rows="5" placeholder="Enter the contact info"> </textarea>
+            </section>
+
+            <aside id="job-parameters">
+                <section class="columns">
+                    <label for="invDate">Date:</label>
+                    <input type="date" id="invDate" name="invDate" value="">
+                    
+                    <label for="invNumber">Invoice Number:</label>
+                    <input type="number" id="invNumber" name="invNumber" value="">
+                    
+                    <label for="dktNumber">Docket Number:</label>
+                    <input type="number" id="dktNumber" name="dktNumber" value="">
+                    
+                    <label for="pchsOrder">Purchase Order:</label>
+                    <input type="text" id="pchsOrder" name="pchsOrder" value="">
+                </section>
+            </aside>
+            
+            <div class="job-headings">Description</div>
+            <aside class="job-headings">Amount</aside>
+            
+            <!-- JOB ITEM 1 -->
+            <div data-jobitem="1" contenteditable="true"><div><span style="font-size: 15.4px;">ENGLISH&nbsp;</span><span style="font-size: 15.4px;">TECH PRO&nbsp;</span><span style="font-size: 15.4px;">Spring 2021</span><span style="font-size: 15.4px;">&nbsp;&nbsp;</span><span style="font-size: 15.4px;">@ $40 x 44pgs</span></div><div><br></div></div>
+            <aside data-jobamt="1">
+                $ <input type="number" id="amt-1" name="amt-1" value="0" required="">
+            </aside>
+            
+            <!-- JOB ITEM 2 -->
+            <div data-jobitem="2" contenteditable="true"><div style="font-size: 15.4px;"><span style="font-size: 15.4px;">FRENCH&nbsp;</span><span style="font-size: 15.4px;">TECH PRO&nbsp;</span><span style="font-size: 15.4px;">Spring 2021</span><span style="font-size: 15.4px;">&nbsp;&nbsp;</span><span style="font-size: 15.4px;">@ $35 x 44pgs</span></div><div style="font-size: 15.4px;"><br></div></div>
+            <aside data-jobamt="2">
+                $ <input type="number" id="amt-2" name="amt-2" value="0" required="">
+            </aside>
+            
+            <!-- JOB ITEM 3 -->
+            <div data-jobitem="3" contenteditable="true"><span style="font-size: 15.4px;">Typeset for French images @ $15&nbsp; x 15 images&nbsp;</span></div>
+            <aside data-jobamt="3">
+                $ <input type="number" id="amt-3" name="amt-3" value="0" required="">
+            </aside>
+            
+            <!-- JOB ITEM 4 -->
+            <div data-jobitem="4" contenteditable="true">&nbsp;</div>
+            <aside data-jobamt="4">
+                $ <input type="number" id="amt-4" name="amt-4" value="0" required="">
+            </aside>
+            
+            <!-- AMOUNT DUE -->
+            <div id="terms">
+              <h5>Terms: Balance due 30 days</h5>
+            </div>
+            <aside id="amount-parameters">
+                <div class="columns">
+                    <label for="subTTL">Sub Total:</label>
+                    <span id="subTTL">3525.00</span>
+
+                    <label for="hst">HST:</label>
+                    <span id="hst">458.25</span>
+
+                    <label for="total">TOTAL:</label>
+                    <span id="total">3983.25</span>
+                    
+                    <!-- Hide this on print -->
+                    <button type="button" class="calc" id="calcButton">Calculate</button>
+                </div>
+            </aside>
+            
+        </main>
+        
+        <!-- Footer Flex Child  -->
+        <footer>
+				<p>1 Rodeo Pathway, Toronto, ON M1N 4E1</p>
+        </footer>
+	
+	</section>
+    <script src="./assets/customers.js"></script>
+    <script src="./assets/invScripts.js"></script>
+
+</body>
+</html>
