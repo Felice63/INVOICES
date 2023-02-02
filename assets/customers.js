@@ -1,5 +1,3 @@
-// SEE:  https://www.youtube.com/watch?v=g4U5WRzHitM
-
 /* 
 
 Create the database, with (DBname, version) parameters then,
@@ -7,7 +5,6 @@ Create the database, with (DBname, version) parameters then,
     transaction,
     storage,
     index number;
-
 */
 
 let request = indexedDB.open("Clients", 1),
@@ -61,7 +58,6 @@ request.onsucccess = function(e) {
     tx.oncomplete = function() {
         db.close();
     }
-    
 }
 
 
